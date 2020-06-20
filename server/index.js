@@ -25,6 +25,8 @@ pgClient.on('connect', () => {
     .catch((err) => console.log(err));
 });
 
+
+
 // Redis Client Setup
 const redis = require('redis');
 const redisClient = redis.createClient({
