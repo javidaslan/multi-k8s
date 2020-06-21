@@ -19,6 +19,7 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t javidaslan/react-test -f ./client/Dockerfile.dev ./client
 
+
 script:
   - docker run -e CI=true javidaslan/react-test npm run test
 
